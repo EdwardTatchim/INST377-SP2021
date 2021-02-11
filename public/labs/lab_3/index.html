@@ -2,3 +2,65 @@
 <!-- Include your stylesheet in the head -->
 <!-- Include your script.js right before the </body> tag -->
 <!-- Make a carousel of four mochi images that cycle, based on the readings from javascript.info -->
+
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Edward Tatchim</title>
+        <link href="styles.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <div id="carousel" class="carousel">
+            <button class="arrow prev">⇦</button>
+            <div class="gallery">
+                <ul class="images">
+                    <li><img src="onigiri_1.png" alt="onigiri_1"></li>
+                    <li><img src="onigiri_2.png" alt="onigiri_2"></li>
+                    <li><img src="onigiri_3.png" alt="onigiri_3"></li>
+                    <li><img src="onigiri_4.png" alt="onigiri_4"></li>
+                    <li><img src="roll_1.png" alt="roll_1"></li>
+                    <li><img src="roll_2.png" alt="roll_2"></li>
+                    <li><img src="roll_3.png" alt="roll_3"></li>
+                </ul>
+            </div>
+
+            <button class="arrow next">⇨</button>
+        </div>
+
+        <script>
+            let x =1;
+            for(let li of carousel.querySelectorAll('li')){
+                li.style.position = 'relative';
+                li.insertAdjacentHTML('beforeen',`<span style="position:absolute;left:0;
+                top:0">${i}</span>`);
+                x++;
+            }
+
+            let width = 200;//image width
+            let count = 3;//visible image count
+
+            let list = carousel.querySelector('ul');
+            let listElems = carousel.querySelectorAll('li');
+
+            let position = 0;
+
+            carousel.querySelector('.prev').onClick = function (){
+                position += width*count;
+
+                position = Math.min(position,0)
+                list.style.marginLeft = position + 'px';
+            };
+
+            carousel.querySelector('.next').onClick = function(){
+                position -= width * count;
+
+                position = Math.max(position, -width * (listElems.length - count));
+                list.style.marginLeft = position + 'px';
+            };
+        </script>
+
+    </body>
+</html> 
