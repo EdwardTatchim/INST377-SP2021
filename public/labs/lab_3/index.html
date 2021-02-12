@@ -8,15 +8,17 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content ="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Edward Tatchim</title>
-        <link href="styles.css" rel="stylesheet">
+        <link href="styles.css"  type="text/css" rel="stylesheet">
     </head>
-
     <body>
-        <div id="carousel" class="carousel">
-            <button class="arrow prev">⇦</button>
-            <div class="gallery">
-                <ul class="images">
+    <div class="carousel">
+        <button class="arrow" id="prev">⇦</button>
+        <div class="galery" id="pics">
+        
+        <ul class="images">
                     <li><img src="onigiri_1.png" alt="onigiri_1"></li>
                     <li><img src="onigiri_2.png" alt="onigiri_2"></li>
                     <li><img src="onigiri_3.png" alt="onigiri_3"></li>
@@ -24,43 +26,14 @@
                     <li><img src="roll_1.png" alt="roll_1"></li>
                     <li><img src="roll_2.png" alt="roll_2"></li>
                     <li><img src="roll_3.png" alt="roll_3"></li>
-                </ul>
-            </div>
-
-            <button class="arrow next">⇨</button>
+             </ul>
+            
         </div>
 
-        <script>
-            let x =1;
-            for(let li of carousel.querySelectorAll('li')){
-                li.style.position = 'relative';
-                li.insertAdjacentHTML('beforeen',`<span style="position:absolute;left:0;
-                top:0">${i}</span>`);
-                x++;
-            }
-
-            let width = 200;//image width
-            let count = 3;//visible image count
-
-            let list = carousel.querySelector('ul');
-            let listElems = carousel.querySelectorAll('li');
-
-            let position = 0;
-
-            carousel.querySelector('.prev').onClick = function (){
-                position += width*count;
-
-                position = Math.min(position,0)
-                list.style.marginLeft = position + 'px';
-            };
-
-            carousel.querySelector('.next').onClick = function(){
-                position -= width * count;
-
-                position = Math.max(position, -width * (listElems.length - count));
-                list.style.marginLeft = position + 'px';
-            };
-        </script>
+        <button class="arrow" id="next">⇨</button>
+    </div>
+         
+     <script src="script.js"></script>
 
     </body>
 </html> 
