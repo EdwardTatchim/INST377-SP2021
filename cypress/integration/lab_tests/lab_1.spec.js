@@ -1,5 +1,4 @@
 describe('Lab 1', () => {
-    cy.fixture('test_values').then((json) => {
   it('Loads and contains entirely valid HTML', () => {
     // This blocks the very tricky livereload script which causes labs to take hours to grade
     cy.intercept('**livereload.js?snipver=1', {
