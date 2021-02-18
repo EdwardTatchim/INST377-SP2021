@@ -100,7 +100,6 @@ document.addEventListener('DOMContentLoaded', ()=> {
         document.removeEventListener('keyup', control)
         ground.classList.add('ground')
         ground.classList.remove('ground-moving')
-        window.alert('Game Over')
     }
     
 
