@@ -3,161 +3,92 @@ body{
     color:green;
     background-color: coral;
     font: normal 18px/1.5;
-    font-weight: 900;
+    font-weight: 90;
     padding: 50px 0;
 
 }
 
-.topic *{
+.topic {
 
-    width: fit-content;
+    width: 200%;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: -1500 0 0 auto;
     display: flex;
-    padding: 50px;
+    padding: 30px;
 }
 
-.container {
-    width: 95%;
-    max-width: 1500px;
-    margin: 0 auto;
-}
-
-.container *{
-
+  
+  .container {
+    width: 400%;
+    max-width: 1200px;
+    margin: -1500 0 0 auto;
+    margin-block: 1px;
+    margin-left: -100px;
+  }
+  
+  .container * {
     box-sizing: border-box;
-}
-
-.flex-outer, .flex-inner {
+    align-items:flex-start;
+  }
+  
+  .flex-outer,
+  .flex-inner {
     list-style-type: none;
     padding: 0;
-}
-
-.flex-outer{
+  }
+  
+  .flex-outer {
     max-width: 800px;
     margin: 0 auto;
-}
-
-.flex-outer #first-name{
-    
-    border: 1px solid #221515;
-    border-radius: .2px;
+  }
   
-    min-height: 2px;
-    margin-bottom: 1px;
-    padding: 3px;
-    width: 670%;
-    margin: -30 180 0 200;
-    
-}
-
-.flex-outer #last-name{
-    
-    border: 1px solid #221515;
-    border-radius: .2px;
-  
-    min-height: 2px;
-    margin-bottom: 1px;
-    padding: 3px;
-    width: 670%;
-    margin: -30 180 0 200;
-    
-}
-
-.flex-outer #email{
-    
-    border: 1px solid #221515;
-    border-radius: .2px;
-  
-    min-height: 2px;
-    margin-bottom: 1px;
-    padding: 3px;
-    width: 670%;
-    margin: -30 180 0 200;
-    
-}
-
-.flex-outer #phone{
-    
-    border: 1px solid #221515;
-    border-radius: .2px;
-  
-    min-height: 2px;
-    margin-bottom: 1px;
-    padding: 3px;
-    width: 670%;
-    margin: -30 180 0 200;
-    
-}
-
-.flex-outer #message{
-    
-    border: 1px solid #221515;
-    border-radius: .2px;
-  
-    min-height: 2px;
-    margin-bottom: 1px;
-    padding: 3px;
-    width: 670%;
-    margin: -30 180 0 200;
-    
-}
-
-.flex-inner #age-range1{
-
-    margin-left: -30;
-    
-   
-}
-
-.flex-inner #age-range2{
-
-    
-    margin-left: center;
-   
-}
-
-.flex-inner #age-range3{
-
-    
-    margin-left: 10;
-    
-   
-}
-
-
-
-
-.flex-outer li,
-.flex-inner {
-
+  .flex-outer li,
+  .flex-inner {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-}
-
-.flex-inner {
-
+  }
+  
+  .flex-inner {
     padding: 0 8px;
-    justify-content: space-between;
-}
-
-.flex-outer > li:not(:last-child){
-
+    justify-content: space-between;  
+  }
+  
+  .flex-outer > li:not(:last-child) {
     margin-bottom: 20px;
-}
-
-
-
-.flex-outer > li > label,
-.flex-outer li p {
-
+  }
+  
+  .flex-outer li label,
+  .flex-outer li p {
+    padding: 8px;
+    font-weight: 300;
+    letter-spacing: .09em;
+    text-transform: uppercase;
+  }
+  
+  .flex-outer > li > label,
+  .flex-outer li p {
     flex: 1 0 120px;
     max-width: 220px;
-}
-
-.flex-outer li button {
-    margin-left: left;
+  }
+  
+  .flex-outer > li > label + *,
+  .flex-inner {
+    flex: 1 0 220px;
+  }
+  
+  .flex-outer li p {
+    margin: 0;
+  }
+  
+  .flex-outer li input:not([type='checkbox']),
+  .flex-outer li textarea {
+    padding: 15px;
+    border: none;
+  }
+  
+  .flex-outer li button {
+    margin-left: 0px;
     padding: 8px 16px;
     border: none;
     background: #333;
@@ -165,8 +96,8 @@ body{
     text-transform: uppercase;
     letter-spacing: .09em;
     border-radius: 2px;
-}
-
-.flex-inner li{
-    width: 80px;
-}
+  }
+  
+  .flex-inner li {
+    width: 100px;
+  }
