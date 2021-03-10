@@ -1,0 +1,96 @@
+*{
+    padding: 0;
+    margin: 0;
+
+}
+
+body{
+
+    color:rgba(29, 34, 2, 0.986);
+    background-image: linear-gradient( coral,coral);
+    align-items: center;
+    font: normal 18px/1.5;
+    font-weight: 90;
+    padding: 50px 0;
+
+}
+
+
+/* The title of the page */
+.header{
+    
+    height: 20px;
+    text-align: center;
+    font-weight: 900; 
+    padding: 30px;
+    text-decoration: underline;
+
+}
+/*form container dimensions*/
+.form-container{
+    list-style-type: none;
+    padding: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+    height: 20px;
+}
+
+
+
+/* The entire form (input/results) */
+.form-container .search-form .search{
+    
+    box-sizing: border-box;
+    width: 600px;
+    padding: 10px;
+    margin-left: initial;
+  
+}
+
+
+  
+
+/* The input box for the form */
+.search {
+    height: 960px;
+    text-align: center;
+    height: 20px;
+    max-width: 600px;
+}
+
+/* To style our header's topic*/
+.flex-outer{
+    list-style-type: none;
+    padding: 2;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+/* Each individual result container */
+.suggestions li{
+    margin-bottom: 15px;
+    margin-top: 10px;
+    background-image: linear-gradient( red, yellow);
+    list-style-type: none;
+    padding: 4;
+    border-radius: 5px;
+}
+.suggestions li span.name {
+    font-weight: 1000;
+    font-size: 30;
+  }
+
+.suggestions li span.category{
+    text-decoration: none;
+
+}
+
+.suggestions li span.address{
+    text-decoration: none;
+
+}
+/* The text inside each result item */
+span{
+    display: block;
+    
+}
